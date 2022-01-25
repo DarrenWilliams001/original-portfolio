@@ -5,14 +5,23 @@ const Project = props => {
     <div className="project-contianer">
       <img src={props.mainImage} />
       <div className="project-info">
-        <a href={props.link}>
-          <h5>{props.title}</h5>
-        </a>
+        <div className="info">
+          <a href={props.link}>
+            <h5>{props.title}</h5>
+          </a>
+          <p>{props.desc}</p>
+        </div>
+
         <div>
-          <img style={{ width: `40px` }} src={props.software} />
-          {props.software2 ? (
-            <img style={{ width: `40px` }} src={props.software2} />
-          ) : null}
+          {props.software.map(icon => {
+            return (
+              <img
+                key={icon.id}
+                style={{ width: `40px` }}
+                src={icon.publicURL}
+              />
+            )
+          })}
         </div>
       </div>
     </div>

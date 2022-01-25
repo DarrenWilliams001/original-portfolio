@@ -7,14 +7,14 @@ const Projects = () => {
     query MyQuery {
       projectsJson {
         projects {
-          title
           link
+          title
           mainImage {
             id
             childImageSharp {
               fluid {
-                srcWebp
                 src
+                srcWebp
               }
             }
           }
@@ -22,10 +22,7 @@ const Projects = () => {
             id
             publicURL
           }
-          software2 {
-            id
-            publicURL
-          }
+          description
         }
       }
     }
@@ -41,9 +38,9 @@ const Projects = () => {
           <Project
             title={p.title}
             mainImage={p.mainImage.childImageSharp.fluid.src}
-            software={p.software1.publicURL}
-            software2={p.software2.publicURL}
+            software={p.software1}
             link={p.link}
+            desc={p.description}
           />
         ))}
       </div>

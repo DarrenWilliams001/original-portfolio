@@ -162,6 +162,8 @@ section {
   opacity: 0.5;
 }
 
+/*Projects section*/
+
 .projects-heading {
   display: flex;
   justify-content: end;
@@ -171,7 +173,7 @@ section {
 }
 .projects-grid {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 50% auto;
   grid-auto-rows: auto;
 }
 .project-contianer {
@@ -188,6 +190,9 @@ section {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+}
+.info {
+  width: 80%;
 }
 .contact-container {
   display: flex;
@@ -293,5 +298,8 @@ section {
 @media only screen and (max-width: 520px) {
   .project-info {
     flex-direction: column;
+  }
+  .info {
+    width: 100%;
   }
 }

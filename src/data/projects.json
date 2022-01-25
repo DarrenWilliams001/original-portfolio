@@ -5,15 +5,22 @@
         "title": "Antique Reproduction Shop",
         "link": "https://antiquereproductionshop.com.au",
         "mainImage": "../images/antique.png",
-        "software1": "../images/wordpress.svg",
-        "software2": "../images/oxygen.svg"
+        "software1": ["../images/wordpress.svg", "../images/oxygen.svg"],
+        "description": "A luxury site built with Oxygen, the leading page builder for WordPress."
       },
       {
         "title": "Motorsport Parts Australia",
         "link": "https://motorsportpartsaustralia.com.au",
         "mainImage": "../images/mpa.png",
-        "software1": "../images/wordpress.svg",
-        "software2": "../images/elementor.svg"
+        "software1": ["../images/wordpress.svg", "../images/elementor.svg"],
+        "description": "Web design built with elementor to create a powerful, easy to use online shop for motorsport enthusiast"
+      },
+      {
+        "title": "Repair Flow",
+        "link": "",
+        "mainImage": "../images/RepairFlow.jpg",
+        "software1": ["../images/logo-react.svg"],
+        "description": "Built using React and MongoDB, Repair flow is a web application that streamlines the work order process through repair orders, time-tracking, task management and reporting features. "
       }
     ]
   }
