@@ -27,12 +27,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Helmet>
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="upgrade-insecure-requests"
-        />
-      </Helmet>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="main-container">
         <div
