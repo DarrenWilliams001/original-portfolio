@@ -3,23 +3,17 @@ import axios from "axios"
 
 const Weather = () => {
   const [currentTemp, setCurrentTemp] = useState(0)
-  const [tempIcon, setTempIcon] = useState()
 
   const getWeather = async () => {
     try {
       await axios
         .get(
-          "http://api.weatherstack.com/current?access_key=bc09fbad52a3794a460accef89d6377b&query=Mooroolbark"
+          "https://api.openweathermap.org/data/2.5/weather?q=mooroolbark&appid=3838b5e28e6c9af238ec2418671d54fe&units=metric"
         )
         .then(function (response) {
-          console.log(response.data.current)
-          setCurrentTemp(response.data.current.temperature)
-          setTempIcon(response.data.current.weather_icons[0])
+          setCurrentTemp(response.data.main.temp)
         })
-        .catch(function (error) {
-          // handle error
-          console.log(error)
-        })
+        .catch(function (error) {})
     } finally {
     }
   }
@@ -36,7 +30,13 @@ const Weather = () => {
 
   return (
     <div
-      style={{ display: `flex`, alignItems: `center`, justifyContent: `end` }}
+      style={{
+        display: `flex`,
+        alignItems: `center`,
+        justifyContent: `end`,
+        borderRight: `solid 2px #1a1b1f70`,
+        paddingRight: `20px`,
+      }}
     >
       <h6
         style={{
@@ -47,8 +47,7 @@ const Weather = () => {
       >
         Melbourne, VIC
       </h6>
-      <h6 style={{ fontSize: `18px` }}>{currentTemp}°</h6>
-      <img style={{ width: `30px`, margin: `0 10px` }} src={tempIcon} />
+      <h6>{currentTemp}°C</h6>
     </div>
   )
 }
