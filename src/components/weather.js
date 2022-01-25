@@ -9,7 +9,7 @@ const Weather = () => {
     try {
       await axios
         .get(
-          "http://api.weatherstack.com/current?access_key=bc09fbad52a3794a460accef89d6377b&query=Mooroolbark"
+          "https://api.weatherstack.com/current?access_key=bc09fbad52a3794a460accef89d6377b&query=Mooroolbark"
         )
         .then(function (response) {
           console.log(response.data.current)
