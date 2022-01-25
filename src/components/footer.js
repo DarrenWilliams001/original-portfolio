@@ -12,6 +12,7 @@ const Footer = () => {
               to="https://www.facebook.com/dazzaw1"
               target={"_blank"}
               className="nav-link"
+              rel="noreferrer"
             >
               FACEBOOK
             </Link>
@@ -21,6 +22,7 @@ const Footer = () => {
               to="https://www.instagram.com/dazzawillo17/"
               className="nav-link"
               target={"_blank"}
+              rel="noreferrer"
             >
               INSTAGRAM
             </Link>
@@ -30,6 +32,7 @@ const Footer = () => {
               to="https://www.linkedin.com/in/darren-williams-699865128/"
               className="nav-link"
               target={"_blank"}
+              rel="noreferrer"
             >
               LINKEDIN
             </Link>
